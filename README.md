@@ -2,6 +2,8 @@
 
 A Playwright project for testing the Sauce Demo website, with adjusted reporting for Cloudbeat
 
+![Cloudbeat Results](https://github.com/cloudbeat-io/examples-typescript-playwright/blob/main/preview/cloudbeat-results.jpg?raw=true)
+
 ## Setup
 1. Clone or download this project.
 2. Navigate to the project directory: `cd cb-playwright`
