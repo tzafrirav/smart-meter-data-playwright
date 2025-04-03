@@ -9,7 +9,7 @@ export default defineConfig({
   reporter: process.env.CB_AGENT ? '@cloudbeat/playwright' : 'html',
   use: {
     trace: 'on-first-retry',
-    video: 'retain-on-failure',
+    video: 'on',
     screenshot: 'only-on-failure'
   },
   projects: [
