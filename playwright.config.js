@@ -10,7 +10,7 @@ export default defineConfig({
   use: {
     trace: "on-first-retry",
     video: "on-first-retry",
-    screenshot: "on",
+    screenshot: "only-on-failure",
     headless: process.env.CB_AGENT ? true : false
   },
   projects: [

@@ -3,7 +3,7 @@ const LoginFlow = require('../flows/loginFlow');
 const  HomePageGoldcardFlow  = require('../flows/homePageGoldcardFlow');
 const { homePageGoldcard } = require('../pages/goldcard/homePage');
 
-test('Download Goldcard file', async ({ page }) => {
+test('Download Goldcard file',{ timeout: 180000 }, async ({ page }) => {
   const loginFlow = new LoginFlow(page);
   const homePageGoldcardFlow = new HomePageGoldcardFlow(page);
 

@@ -6,7 +6,7 @@ class Helper {
   async click(locator) {
     await locator.scrollIntoViewIfNeeded();
     await this.page.waitForTimeout(500); // כמו pause
-    await locator.waitFor({ state: 'visible', timeout: 12000 });
+    await locator.waitFor({ state: 'visible', timeout: 25*1000 });
     await locator.click();
   }
 

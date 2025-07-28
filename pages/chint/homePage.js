@@ -74,11 +74,22 @@ class HomePageChint {
   //       IFRAME
   ///////////////////////
 
+  
   async moveToIframe() {
-    const frame = this.page.frame({ name: 'RightFrame' });
-    if (!frame) throw new Error('RightFrame not found');
-    this.page = frame; // מעדכן את page למחיקת עבודה בתוך iframe
-  }
+  // ממתין שה־iframe יופיע ב־DOM
+  await this.page.waitForSelector('#RightFrame');
+
+  // מאחזר את ה־element של ה־iframe לפי ה־id
+  const frameElementHandle = await this.page.$('#RightFrame');
+  if (!frameElementHandle) throw new Error('❌ iframe עם id RightFrame לא נמצא');
+
+  // מקבל את האובייקט של ה־iframe
+  const frame = await frameElementHandle.contentFrame();
+  if (!frame) throw new Error('❌ לא הצליח לגשת ל־contentFrame מתוך RightFrame');
+
+  // מעדכן את page לעבודה בתוך ה־iframe
+  this.page = frame;
+}
 
   ///////////////////////
   //       SET
@@ -107,4 +118,4 @@ class HomePageChint {
   }
 }
 
-module.exports = { HomePageChint };
+module.exports =  HomePageChint ;
