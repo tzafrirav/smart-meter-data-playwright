@@ -1,0 +1,7 @@
+{
+    "username": "Demo001",
+    "password": "pazgassmart24",
+    "chintUrl": "http://121.196.218.231:6074/PowerEasy/login",
+    "directory": "\\\\vmfs.domain.local\\data\\Matte\\smartMeterReads\\{env}\\SmartMeters_chint",
+    "backupDirectory": "\\\\vmfs.domain.local\\data\\Matte\\smartMeterReads\\{env}\\tzafrir_backup"
+}

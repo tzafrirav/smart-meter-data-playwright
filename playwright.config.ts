@@ -8,9 +8,10 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CB_AGENT ? '@cloudbeat/playwright' : 'html',
   use: {
-    trace: 'on-first-retry',
-    video: 'on',
-    screenshot: 'only-on-failure'
+    trace: "on-first-retry",
+    video: "on-first-retry",
+    screenshot: "on",
+    headless: process.env.CB_AGENT ? true : false
   },
   projects: [
     {
